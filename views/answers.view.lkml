@@ -58,17 +58,33 @@ view: answers {
     type: count
     drill_fields: [detail*]
   }
+  measure: dash_nav {
+    hidden: no
+    label: "Navigation Bar"
+    type: string
+    sql: "";;
+    html:
+    <div style="background-color: #FFFFFF; height:525px;width:100%"></div>
+      <div style="background-color: #FFFFFF; border: solid 1px #4285F4; border-radius: 5px; padding: 5px 10px; height: 60px; width:100%">
+        <nav style="font-size: 18px; color: #4285F4">
+      <a style="padding: 5px; float: center; line-height: 40px; margin-left: 8px; color: #4285F4" href="/dashboards/5?">Colegios</a>
+      </nav>
+      </div>
+      <div style="background-color: #FFFFFF; height:500px;width:100%"></div>;;
+  }
+
+
 
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	id,
-	participants.id,
-	participants.name,
-	questions.construct_name,
-	questions.id,
-	answer_metrics.count
-	]
+  id,
+  participants.id,
+  participants.name,
+  questions.construct_name,
+  questions.id,
+  answer_metrics.count
+  ]
   }
 
 }
